@@ -49,6 +49,12 @@ body {
     background-color: #f9f8f8;
 }
 
+#nombre {
+    display: flex;
+    width: 90%;
+    margin: 10px auto 0 auto;
+}
+
 #dni {
     position: relative;
     width: 90%;
