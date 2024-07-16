@@ -37,6 +37,8 @@ body {
 #top p {
     color: #e8f7fd;
     margin-left: -30%;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 #dni-container {
@@ -69,21 +71,19 @@ body {
     transition: transform 0.6s;
 }
 
-#dni #dni-adelante {
-    z-index: 10;
+#dni-adelante {
     transform: rotateY(0deg);
 }
 
 #dni-atras {
-    z-index: 1;
     transform: rotateY(180deg);
 }
 
-#dni:hover #dni-adelante {
+.volteado #dni-adelante {
     transform: rotateY(-180deg);
 }
 
-#dni:hover #dni-atras {
+.volteado #dni-atras {
     transform: rotateY(0deg);
 }
 
@@ -98,15 +98,45 @@ body {
     text-decoration: none;
 }
 
-#ultima-act {
+
+.extras span {
+    font-weight: 500;
+   font-size: 30PX;
+    margin: 10px;
+}
+.extras #cuadrado {
+   color: #026fbd;
+}
+.extras #telefono {
+    color: #8b8a8b;
+}
+
+.reloj {
     text-align: center;
     color: #767676;
     padding: 10px;
+    font-size: 17px;
 }
 
 
 #bolas {
-    display: none;
+    display: flex;
+    width: 100%;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#bolas span {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin: 8px;
+    border-radius: 100%;
+    background-color: #3e3f3f;
+    transition: .2s;
+}
+.seleccionada {
+    background-color: #1da4eb !important;
 }
 
 @media only screen and (min-width:  430px){
