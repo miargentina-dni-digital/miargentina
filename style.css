@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #fffefe;
+    overflow-x: hidden;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;  
+    height: 100vh;
+    width: 100vw;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#top {
+    display: flex;
+    max-width: 100%;
+    background-color: #1ca5eb;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#top span {
+    color: #c6e9fb;
+    font-weight: 200;
+}
+#top p {
+    color: #e8f7fd;
+    margin-left: -30%;
+}
+
+#dni-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #f9f8f8;
+}
+
+#dni {
+    position: relative;
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    display: flex;
+    margin: 10px auto;
+
+    perspective: 1000px;
+}
+
+#dni img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 1px 1px 15px 1px rgba(176,170,176,1);
+
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+#dni #dni-adelante {
+    z-index: 10;
+    transform: rotateY(0deg);
+}
+
+#dni-atras {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+#dni:hover #dni-adelante {
+    transform: rotateY(-180deg);
+}
+
+#dni:hover #dni-atras {
+    transform: rotateY(0deg);
+}
+
+.extras {
+    display: flex;
+    width: 100%;
+    background-color: #fffefe;
+    color: #010100;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#ultima-act {
+    text-align: center;
+    color: #767676;
+    padding: 10px;
+}
+
+
+#bolas {
+    display: none;
+}
+
+@media only screen and (min-width:  430px){
+    #dni {
+        height: 400px;
+    }
+}    
