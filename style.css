@@ -125,6 +125,7 @@ body {
     height: 20px;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20px;
 }
 #bolas span {
     display: flex;
