@@ -62,7 +62,6 @@ body {
     display: flex;
     margin: 10px auto;
     perspective: 1000px;
-    background-color: #FEFEFE;
 }
 
 #dni img{
