@@ -51,12 +51,12 @@
                 <img src="imgs/iconos-inicio/4.png" alt="4">
             </div>
 
-            <div id="grid-5-seleccionado" class="grid-item">
+            <div onclick="activarPantallaCompleta()" id="grid-5-seleccionado" class="grid-item">
                 <span id="sombra5"></span>
                 <img src="imgs/iconos-inicio/5.png" alt="5">
             </div>
 
-            <div id="grid-6-seleccionado" class="grid-item">
+            <div onclick="activarPantallaCompleta()" id="grid-6-seleccionado" class="grid-item">
                 <span id="sombra6"></span>
                 <img src="imgs/iconos-inicio/6.png" alt="6">
             </div>
@@ -121,6 +121,21 @@
                 sombra6.classList.remove('sombra');
             }, 100);
         });
+    </script>
+
+    <script>
+        function activarPantallaCompleta() {
+            const elemento = document.documentElement;
+            if (elemento.requestFullscreen) {
+                elemento.requestFullscreen();
+            } else if (elemento.mozRequestFullScreen) {
+                elemento.mozRequestFullScreen();
+            } else if (elemento.webkitRequestFullscreen) {
+                elemento.webkitRequestFullscreen();
+            } else if (elemento.msRequestFullscreen) {
+                elemento.msRequestFullscreen();
+            }
+        }
     </script>
 </body>
 </html>
