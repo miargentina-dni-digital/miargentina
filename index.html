@@ -39,11 +39,11 @@
 
             <p class="reloj" id="reloj">Ultima actualización </p>
 
-            <div id="extra-2" class="extras">
+            <div class="extras">
                 <span id="cuadrado" class="material-symbols-outlined">stay_current_landscape</span>
                 <p>Ver detalle de mi DNI digital</p>
             </div>
-            <div id="extra-1"  onclick="activarPantallaCompleta()" class="extras">
+            <div onclick="activarPantallaCompleta()" class="extras">
                 <span id="telefono" class="material-symbols-outlined">phone_in_talk</span>
                 <p>Mesa de ayuda</p>
             </div>
@@ -80,12 +80,12 @@
                     <img src="imgs/iconos-inicio/4.png" alt="4">
                 </div>
     
-                <div id="grid-5-seleccionado" class="grid-item">
+                <div onclick="activarPantallaCompleta()" id="grid-5-seleccionado" class="grid-item">
                     <span id="sombra5"></span>
                     <img src="imgs/iconos-inicio/5.png" alt="5">
                 </div>
     
-                <div id="grid-6-seleccionado" class="grid-item">
+                <div onclick="activarPantallaCompleta()" id="grid-6-seleccionado" class="grid-item">
                     <span id="sombra6"></span>
                     <img src="imgs/iconos-inicio/6.png" alt="6">
                 </div>
@@ -154,20 +154,17 @@
     <script>
         const menuContainer = document.getElementById('menu-container');
         const barra = document.getElementById('barra');
-        const extra1 = document.getElementById('extra-1');
-        const extra2 = document.getElementById('extra-2');
+        const dniContainer = document.getElementById('dni-container');
         document.getElementById('back').addEventListener('click', function() {
             menuContainer.classList.add('menu-activado');
             barra.classList.add('barra-activada');
-            extra1.classList.add('extras-desactivado');
-            extra2.classList.add('extras-desactivado');
+            dniContainer.classList.add('dni-desactivado');
         });
 
         document.getElementById('grid-1-seleccionado').addEventListener('click', function() {
             menuContainer.classList.remove('menu-activado');
             barra.classList.remove('barra-activada');
-            extra1.classList.remove('extras-desactivado');
-            extra2.classList.remove('extras-desactivado');
+            dniContainer.classList.remove('dni-desactivado');
         })
     </script>
 
